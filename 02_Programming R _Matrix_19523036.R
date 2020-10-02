@@ -1,0 +1,43 @@
+A <- matrix(data = c(1,2,3,4), nrow = 2, ncol = 2, byrow = TRUE)
+A    
+
+M <- matrix(c(1,2,3,4,5,6,7,8,9), 3,3, TRUE)
+A[-1,]
+A[,-2]
+
+N <- matrix(c(1:9), 3, 3, TRUE)
+(N[N > 3] <- 2)
+
+#Exercise
+
+#Soal nomor 2
+values <- sample (c(1:1000), 100, replace = FALSE)
+values 
+
+#Soal nomor 3
+G <- matrix(c(values), nrow = 10, ncol = 10, TRUE)
+G
+
+#Soal nomor 4
+
+#4.1
+H <- t(G)
+H
+
+#4.2
+J <- G + H
+J
+
+#4.3
+det(G)
+det(H)
+det(J)
+
+#4.4 
+K <- cbind(G[, 1:5], J[, 1:5])
+K
+
+#4.5
+G %*% solve (G)
+
+
